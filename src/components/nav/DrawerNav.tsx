@@ -69,6 +69,12 @@ const DrawerNav = ({ isDrawerOpen }: Props) => {
             </span>
           </div>
           <div className="sub-menu">
+            <SubLink href="https://traefik.io/solutions/gateway-api/">
+              Kubernetes Gateway API
+            </SubLink>
+            <SubLink href="https://traefik.io/solutions/knative/">
+              Knative Serving <Badge>New!</Badge>
+            </SubLink>
             <SubLink href="https://traefik.io/solutions/ai-gateway/">
               AI Gateway
               <Badge>New!</Badge>
@@ -100,7 +106,6 @@ const DrawerNav = ({ isDrawerOpen }: Props) => {
             <SubLink href="https://traefik.io/solutions/oracle-and-traefik/">Traefik & Oracle OCI</SubLink>
           </div>
         </div>
-
 
         <div className="menu-item-wrapper menu-item-wrapper--expandable" onClick={(e) => toggleMenu(e)}>
           <span className="menu-item menu-item--with-icon">
