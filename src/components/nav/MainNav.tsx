@@ -4,8 +4,11 @@ import { Flex, Grid } from '@containous/faency'
 import NavItem from './NavItem'
 import Product from './Product'
 import * as MenuColumn from './MenuColumn'
+import { ReactComponent as ProductNginxIcon } from '../../images/product_Nginx.svg'
+import { ReactComponent as IconKnative } from '../../images/IconKnative.svg'
+import { ReactComponent as ProductIconKnative } from '../../images/product_Knative.svg'
 import { ReactComponent as IconKubernetes } from '../../images/IconKubernetes.svg'
-import { ReactComponent as IconDockerSwarm } from '../../images/IconDockerSwarm.svg'
+import { ReactComponent as IconKubernetesIngress } from '../../images/IconKubernetesIngress.svg'
 import { ReactComponent as IconApiGovernance } from '../../images/IconApiGovernance.svg'
 import { ReactComponent as IconsApiMocks } from '../../images/IconsApiMocks.svg'
 import { ReactComponent as IconAiGateway } from '../../images/IconAiGateway.svg'
@@ -20,7 +23,6 @@ import { ReactComponent as OfflineApim } from '../../images/OfflineApim.svg'
 import { ReactComponent as ApiMockingIcon } from '../../images/APIMocking.svg'
 import { ReactComponent as APIManagementIcon } from '../../images/APIManagement.svg'
 import { ReactComponent as NginxIcon } from '../../images/Nginx.svg'
-import { ReactComponent as DockerSwarmIcon } from '../../images/DockerSwarmIngress.svg'
 import { ReactComponent as KubernetesIcon } from '../../images/KubernetesIngress.svg'
 import { ReactComponent as MicrosoftIcon } from '../../images/menu_icons_microsoft.svg'
 import { ReactComponent as WafIcon } from '../../images/menu_icons_waf.svg'
@@ -66,16 +68,22 @@ const MainNav = () => {
                 ]}
                 subLinks={[
                   {
-                    title: 'Kubernetes Ingress',
+                    title: 'Kubernetes Gateway API',
                     external: true,
                     icon: <IconKubernetes />,
-                    url: 'https://traefik.io/solutions/kubernetes-ingress/',
+                    url: 'https://traefik.io/solutions/gateway-api/',
                   },
                   {
-                    title: 'Docker Swarm Ingress',
+                    title: 'Knative Serving',
                     external: true,
-                    icon: <IconDockerSwarm />,
-                    url: 'https://traefik.io/solutions/docker-swarm-ingress/',
+                    icon: <ProductIconKnative />,
+                    url: 'https://traefik.io/solutions/knative/',
+                  },
+                  {
+                    title: 'Ingress NGINX Provider',
+                    external: true,
+                    icon: <ProductNginxIcon />,
+                    url: 'https://traefik.io/choose-traefik-oss/',
                   },
                 ]}
               />
@@ -160,21 +168,29 @@ const MainNav = () => {
               padding="24px 0"
               links={[
                 {
-                  title: 'Kubernetes Ingress',
+                  icon: <IconKubernetesIngress />,
                   url: 'https://traefik.io/solutions/kubernetes-ingress/',
                   external: true,
                   description: 'A centralized routing solution for your Kubernetes deployment.',
+                  title: 'Kubernetes Ingress',
+                },
+                {
+                  title: 'Kubernetes Gateway API',
+                  url: 'https://traefik.io/solutions/gateway-api/',
+                  external: true,
+                  description: 'Deploy Gateway API with confidence.',
                   icon: <KubernetesIcon />,
                 },
                 {
-                  title: 'Docker Swarm Ingress',
-                  url: 'https://traefik.io/solutions/docker-swarm-ingress/',
+                  title: 'Knative Serving',
+                  url: 'https://traefik.io/solutions/knative/',
                   external: true,
-                  description: 'Manage incoming network traffic across your cluster',
-                  icon: <DockerSwarmIcon />,
+                  description: 'The universal Kubernetes gateway for all workloads.',
+                  icon: <IconKnative />,
+                  badge: 'New!',
                 },
                 {
-                  title: 'Replace Ingress-NGINX',
+                  title: 'Ingress NGINX Provider',
                   url: 'https://traefik.io/choose-traefik-oss/',
                   external: true,
                   description: 'Don’t wait for the next vulnerability. Migrate now!',
